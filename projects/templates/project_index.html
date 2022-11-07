@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
+.mySlides {display: none}
+
+.card-deck{
+  display:flex;
+  flex-direction:row
+}
+hr2 {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 1em;
+    padding: 0;
+}
+</style>
+
+
+<!-- Container element -->
+<div class="parallax"></div>
+
+<body style="background-color:FFFCF0; font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
+
+<!-- Photo -->
+<img src="{% static 'img/profile2.png' %}" style="float: left; max-width: 7rem;""/>
+
+<!-- Title -->
+<h1 style="font-size:7vw">i n h</h1>
+
+<br />
+<br />
+
+<!-- Description -->
+<h1 style="font-size:3vw" style="margin-left:10px">Hi! I'm Ian, a math and molecular biology major at Pomona college, among other things.</h1>
+<h1 style="font-size:3vw">  </h1>
+<h1 style="font-size:3vw">  </h1>
+
+<br />
+<br />
+
+<!-- CARDS -->
+<div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <h3>Research Experience</h3>
+      <img class="card-img-top" src="{% static 'img/caltech2.png' %}">
+
+      <p>Here are some of the cool things I've been able to work on both here at Pomona and at Caltech</p>
+
+      <p><a href="{% url 'project_research'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
+
+
+
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <h3>Projects</h3>
+      <img class="card-img-top" src="{% static 'img/graph5.png' %}">
+
+      <p>Here's a handful of fun projects I've done, some as part of a class, and some on my own time</p>
+      <p><a href="{% url 'project_projects'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <h3>Coursework</h3>
+      <img class="card-img-top" src="{% static 'img/schedule.png' %}">
+
+      <p>Here's a list of the classes I've taken here at Pomona as well as links to some of my work.</p>
+      <p><a href="{% url 'project_course'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <h3>Extracurriculars</h3>
+      <img class="card-img-top" src="{% static 'img/extra.png' %}">
+
+      <p>Here's what find fulfillment in before and after the bell rings :)</p>
+      <p><a href="{% url 'project_extra'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
+    </div>
+  </div>
+
+<!-- NAVBAR -->
+<div class="w3-bottom" style="margin-bottom:5px">
+  <hr2/>
+  <a > © 2022 Ian Horsburgh. I built this website using Django framework. A few elements were influenced by W3 schools, a great resourse that you should check out!</a>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

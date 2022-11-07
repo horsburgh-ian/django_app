@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
+.mySlides {display: none}
+
+.card-deck{
+  display:flex;
+  flex-direction:row
+}
+hr2 {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 1em;
+    padding: 0;
+}
+</style>
+
+
+<!-- Container element -->
+<div class="parallax"></div>
+
+<body style="background-color:FFFCF0; font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
+
+  <!-- Projects Section -->
+  <!-- 158 project -->
+  <div class="w3-main" style="margin-left:10px" id="projects">
+  <h1 style="font-size:3vw">Projects</h1>
+
+    <div class="w3-row">
+      <h1 style="font-size:2vw">Using MLR to Model Blood Pressure</h1>
+      <hr2/>
+      <br />
+      <div class="w3-twothird w3-container">
+        <h1 style="font-size:2vw">Collaborators</h1>
+        <p>Sara Colando<p>
+        <h1 style="font-size:2vw">Descrption</h1>
+        <p>As part of the Statistical Linear Model class I took in spring 2022, Sara and I used the NHANES dataset in R to model systemic blood pressure as a function of many variables. We compared models made using OLS to those with Ridge and Lasso penalties, as well as discussing variable selection, imputation, and finally touching on regression splines and kernal smoothing.<p>
+          <h1 style="font-size:2vw">Link</h1>
+        <a href="https://github.com/ST47S-LinMod/projD-ColandoHorsburgh">Here is the full project!</a>
+          </div>
+
+      <div class="w3-third w3-container">
+        <img class="card-img-top" src="{% static 'img/graph4.png' %}" style="max-width: 25rem">
+      </div>
+
+    </div>
+  <!-- gcms project -->
+
+            <div class="w3-row">
+              <h1 style="font-size:2vw">Analyzing Cheese Volitiles with GC-MS</h1>
+              <hr2/>
+              <br />
+              <div class="w3-twothird w3-container">
+                <h1 style="font-size:2vw">Collaborators</h1>
+                <p>Matt Teeter, Ryan Ruaysungnoen<p>
+                <h1 style="font-size:2vw">Descrption</h1>
+                <p>As part of the Advanced Analytical Chemistry class I'm taking in the fall of 2022, I designed as carried out an experiment to analyize and compare the volitile organic compounds in three types of cheeses deemed especially stinky by the local cheese shop. Most of the finding were expected, although we did find an 'acutely toxic' saturated hydrocarbon with high match quality in multiple runs of one cheese. Maybe think twice next time you're reaching for your Epoisses-Coup!.<p>
+
+                  </div>
+
+              <div class="w3-third w3-container">
+                <img class="card-img-top" src="{% static 'img/gcms.png' %}" style="max-width: 25rem">
+              </div>
+
+
+    </div>
+
+
+
+{% endblock %}
