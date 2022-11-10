@@ -3,50 +3,74 @@
 
 {% block page_content %}
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: 'Helvetica', 'Arial', sans-serif;}
-.mySlides {display: none}
+<html>
+<body>
 
-.card-deck{
-  display:flex;
-  flex-direction:row
-}
-hr2 {
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- HTML BLOCK -->
+<!-- Navbar -->
+<div class="w3-top">
+<h1 style="font-size:7vw">i n h</h1>
+</div>
+<!-- Title -->
+
+
+<br />
+<br />
+<div id="set-height"></div>
+<p id="time"></p>
+<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
+  <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="{% static 'vid/video3.mp4' %}""></source>
+  </video>
+
+
+</html>
+
+  <!-- CSS BLOCK -->
+<style>
+  #set-height {
     display: block;
-    height: 2px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 1em;
-    padding: 0;
-}
+  }
+  #v0 {
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100%;
+  }
+  p font-family helvetica {
+    font-size: 24px;
+  }
 </style>
 
 
-<!-- RESEARCH Section -->
-<!-- Caltech Work -->
-<div class="w3-main" style="margin-left:10px" id="research">
-<h1 style="font-size:3vw">Projects</h1>
 
-  <div class="w3-row">
-    <h1 style="font-size:2vw">Chou lab at Caltech</h1>
-    <hr2/>
-    <br />
-    <div class="w3-twothird w3-container">
+<!-- JS BLOCK -->
 
-      <h1 style="font-size:2vw">Descrption</h1>
-      <p>As part of the Statistical Linear Model class I took in spring 2022, Sara and I used the NHANES dataset in R to model systemic blood pressure as a function of many variables. We compared models made using OLS to those with Ridge and Lasso penalties, as well as discussing variable selection, imputation, and finally touching on regression splines and kernal smoothing.<p>
-        <h1 style="font-size:2vw">Link</h1>
-      <a href="https://github.com/ST47S-LinMod/projD-ColandoHorsburgh">Here is the full project!</a>
-        </div>
+<script>
+var frameNumber = 0, // start video at frame 0
+    // lower numbers = faster playback
+    playbackConst = 500,
+    // get page height from video duration
+    setHeight = document.getElementById("set-height"),
+    // select video element
+    vid = document.getElementById('v0');
 
-    <div class="w3-third w3-container">
-      <img class="card-img-top" src="{% static 'img/caltech2.png' %}" style="max-width: 25rem">
-    </div>
+// dynamically set the page height according to video length
+vid.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+});
 
-  </div>
+// Use requestAnimationFrame for smooth playback
+function scrollPlay(){
+  var frameNumber  = window.pageYOffset/playbackConst;
+  vid.currentTime  = frameNumber;
+  window.requestAnimationFrame(scrollPlay);
+}
 
+window.requestAnimationFrame(scrollPlay);
+
+</script>
 
 {% endblock %}
