@@ -28,24 +28,51 @@ hr2 {
 <!-- Container element -->
 <div class="parallax"></div>
 
-<body style="background-color:FFFCF0; font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
+<body style="font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
 
   <!-- Projects Section -->
-  <!-- 158 project -->
-  <div class="w3-main" style="margin-left:10px" id="projects">
-  <h1 style="font-size:3vw">Projects</h1>
 
+  <div class="w3-main" style="margin-left:10px" id="projects">
+  <h1 style="font-size:5vw">Projects</h1>
+
+  <!-- website -->
+
+            <div class="w3-row">
+
+
+              <div class="w3-twothird w3-container">
+                <h1 style="font-size:3.5vw">This Website</h1>
+                <h1 style="font-size:3vw">Descrption</h1>
+                <h1 style="font-size:2vw">Although I've been interested in web design for a while,
+                  and had used HTML and CSS briefly in the past, I didn't really have time to pursure it until this fall
+                  when I decided to make a website. I build this one with Django, an open source framework based around Python,
+                  and hosted it origionally on the devil incarnite (AWS) before moving over to Digitalocean, where it's hosted now.</h1>
+
+                  <a href="https://github.com/horsburgh-ian/django_app">Here's a link to the website source code on github!</a>
+                    <br />
+                  </div>
+
+
+              <div class="w3-third w3-container">
+                <img class="card-img-top" src="{% static 'img/web.png' %}" style="max-width: 25rem">
+  <br />
+              </div>
+
+<br />
+  <!-- 158 project -->
     <div class="w3-row">
-      <h1 style="font-size:2vw">Using MLR to Model Blood Pressure</h1>
-      <hr2/>
-      <br />
+
       <div class="w3-twothird w3-container">
-        <h1 style="font-size:2vw">Collaborators</h1>
+        <h1 style="font-size:3.5vw">Using MLR to Model Blood Pressure</h1>
+        <h1 style="font-size:2.5vw">Collaborators</h1>
         <p>Sara Colando<p>
-        <h1 style="font-size:2vw">Descrption</h1>
-        <p>As part of the Statistical Linear Model class I took in spring 2022, Sara and I used the NHANES dataset in R to model systemic blood pressure as a function of many variables. We compared models made using OLS to those with Ridge and Lasso penalties, as well as discussing variable selection, imputation, and finally touching on regression splines and kernal smoothing.<p>
-          <h1 style="font-size:2vw">Link</h1>
-        <a href="https://github.com/ST47S-LinMod/projD-ColandoHorsburgh">Here is the full project!</a>
+        <h1 style="font-size:2.5vw">Descrption</h1>
+        <h1 style="font-size:2vw">As part of the Statistical Linear Model class I took in spring 2022,
+          Sara and I used the NHANES dataset in R to model systemic blood pressure as a function of many variables.
+          We compared models made using OLS to those with Ridge and Lasso penalties, as well as discussing variable
+          selection, imputation, and finally touching on regression splines and kernal smoothing.</h1>
+
+        <a href="https://github.com/ST47S-LinMod/projD-ColandoHorsburgh">Here is a link to the full project!</a>
           </div>
 
       <div class="w3-third w3-container">
@@ -53,17 +80,22 @@ hr2 {
       </div>
 
     </div>
+    <br />
   <!-- gcms project -->
 
             <div class="w3-row">
-              <h1 style="font-size:2vw">Analyzing Cheese Volitiles with GC-MS</h1>
-              <hr2/>
-              <br />
+
               <div class="w3-twothird w3-container">
-                <h1 style="font-size:2vw">Collaborators</h1>
+                <h1 style="font-size:3.5vw">Analyzing Cheese Volitiles with GC-MS</h1>
+                <h1 style="font-size:2.5vw">Collaborators</h1>
                 <p>Matt Teeter, Ryan Ruaysungnoen<p>
-                <h1 style="font-size:2vw">Descrption</h1>
-                <p>As part of the Advanced Analytical Chemistry class I'm taking in the fall of 2022, I designed as carried out an experiment to analyize and compare the volitile organic compounds in three types of cheeses deemed especially stinky by the local cheese shop. Most of the finding were expected, although we did find an 'acutely toxic' saturated hydrocarbon with high match quality in multiple runs of one cheese. Maybe think twice next time you're reaching for your Epoisses-Coup!.<p>
+                <h1 style="font-size:2.5vw">Descrption</h1>
+                <h1 style="font-size:2vw">As part of the Advanced Analytical Chemistry class I'm taking in the fall
+                   of 2022, I designed as carried out an experiment to analyize and compare the volitile organic
+                   compounds in three types of cheeses deemed especially stinky by the local cheese shop. Most of the
+                    finding were expected, although we did find an 'acutely toxic' saturated hydrocarbon with high match
+                     quality in multiple runs of one cheese. Maybe think twice next time you're reaching for your
+                     Epoisses-Coup!.</h1>
 
                   </div>
 

@@ -3,74 +3,92 @@
 
 {% block page_content %}
 
-<html>
-<body>
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- HTML BLOCK -->
-<!-- Navbar -->
-<div class="w3-top">
-<h1 style="font-size:7vw">i n h</h1>
-</div>
-<!-- Title -->
-
-
-<br />
-<br />
-<div id="set-height"></div>
-<p id="time"></p>
-<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
-  <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="{% static 'vid/video3.mp4' %}""></source>
-  </video>
-
-
-</html>
-
-  <!-- CSS BLOCK -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  #set-height {
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
+.mySlides {display: none}
+
+.card-deck{
+  display:flex;
+  flex-direction:row
+}
+hr2 {
     display: block;
-  }
-  #v0 {
-    position: fixed;
-    top: 100;
-    left: 0;
-    width: 100%;
-  }
-  p font-family helvetica {
-    font-size: 24px;
-  }
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 1em;
+    padding: 0;
+}
 </style>
 
+<!-- Container element -->
+<div class="parallax"></div>
+
+<body style="font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
+
+<!-- Courses Section -->
+<!-- Classes -->
+<div class="w3-main" style="margin-left:10px" id="research">
+<h1 style="font-size:5vw">Relevant Coursework</h1>
+
+  <div class="w3-row">
+    <div class="w3-third w3-container">
+      <h1 style="font-size:4vw">Math</h1>
+      <h1 style="font-size:2vw">AP Calculus BC</h1>
+      <h1 style="font-size:2vw">MATH060 Linear Algebra</h1>
+      <h1 style="font-size:2vw">MATH067 Vector Calculus</h1>
+      <h1 style="font-size:2vw">MATH102 Differential Equations</h1>
+      <h1 style="font-size:2vw">MATH151 Probability Theory</h1>
+      <h1 style="font-size:2vw">MATH158 Statistical Linear Models</h1>
+</div>
+    <div class="w3-third w3-container">
+      <h1 style="font-size:4vw">Chemistry</h1>
+      <h1 style="font-size:2vw">AP Chemistry</h1>
+      <h1 style="font-size:2vw">CHEM051 Accel. General Chemistry</h1>
+      <h1 style="font-size:2vw">CHEM S-20ab Intensive Summer Organic Chemistry</h1>
+      <h1 style="font-size:2vw">CHEM 161 Advanced Analytical Chemistry</h1>
+        </div>
+        <div class="w3-third w3-container">
+      <h1 style="font-size:4vw">Biology</h1>
+      <h1 style="font-size:2vw">BIO040 Introductory Genetics</h1>
+      <h1 style="font-size:2vw">CHEM041 Introductory Cell Chem & Cell Bio</h1>
+
+</div>
+        </div>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="w3-main" style="margin-left:10px" id="research">
+    <h1 style="font-size:5vw">Other Skills</h1>
+
+      <div class="w3-row">
+        <div class="w3-third w3-container">
+          <h1 style="font-size:4vw">Computer Science</h1>
+          <h1 style="font-size:2vw">Python</h1>
+          <h1 style="font-size:2vw">HTML, CSS, JavaScript</h1>
+          <h1 style="font-size:2vw">R</h1>
+          <h1 style="font-size:2vw">C (a long time ago)</h1>
+
+    </div>
+        <div class="w3-third w3-container">
+          <h1 style="font-size:4vw">Software I'm Confortable With</h1>
+          <h1 style="font-size:2vw">AutoDock, AutoDock Vina</h1>
+          <h1 style="font-size:2vw">Mathamatica</h1>
+          <h1 style="font-size:2vw">R Studio</h1>
+            </div>
+            <div class="w3-third w3-container">
+          <br />
+
+    </div>
+            </div>
+
+        </div>
 
 
-<!-- JS BLOCK -->
 
-<script>
-var frameNumber = 0, // start video at frame 0
-    // lower numbers = faster playback
-    playbackConst = 500,
-    // get page height from video duration
-    setHeight = document.getElementById("set-height"),
-    // select video element
-    vid = document.getElementById('v0');
-
-// dynamically set the page height according to video length
-vid.addEventListener('loadedmetadata', function() {
-  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-});
-
-// Use requestAnimationFrame for smooth playback
-function scrollPlay(){
-  var frameNumber  = window.pageYOffset/playbackConst;
-  vid.currentTime  = frameNumber;
-  window.requestAnimationFrame(scrollPlay);
-}
-
-window.requestAnimationFrame(scrollPlay);
-
-</script>
 
 {% endblock %}

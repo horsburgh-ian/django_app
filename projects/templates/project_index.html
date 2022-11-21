@@ -1,100 +1,251 @@
 {% extends "base.html" %}
 {% load static %}
-{% block page_content %}
 
+{% block page_content %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: 'Helvetica', 'Arial', sans-serif;}
-.mySlides {display: none}
 
-.card-deck{
-  display:flex;
-  flex-direction:row
-}
-hr2 {
-    display: block;
-    height: 2px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 1em;
-    padding: 0;
-}
-</style>
+<!-- Description <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></<script> -->
 
+<html>
 
-<!-- Container element -->
-<div class="parallax"></div>
+  <div class="header"
+  <!-- Photo -->
+  <img src="{% static 'img/profile23.png' %}" style="float: left; max-width: 7rem;""/>
+  <!-- Title -->
+  <h1 style="font-size:7vw">i n h</h1>
 
-<body style="background-color:FFFCF0; font-family: 'Helvetica', 'Arial', sans-serif; border: 10px solid while;">
+  <!-- Description -->
+  <h1 style="font-size:3vw" style="margin-left:40px">Hi! I'm Ian, a math and molecular biology major at Pomona College, among other things.</h1>
+</div>
 
-<!-- Photo -->
-<img src="{% static 'img/profile2.png' %}" style="float: left; max-width: 7rem;""/>
+<body>
+    <!-- research -->
 
-<!-- Title -->
-<h1 style="font-size:7vw">i n h</h1>
+  <div class="image-one">
+    <div class="caption" >
+      <h1 style="font-size:5vw"style="margin-left:10px">Research Experience</h1>
+      <div class="w3-third w3-container">
+        <br />
 
-<br />
-<br />
+        <h1 style="font-size:2.5vw" style="margin-left:40px">That weird globular thing to the right is FIP200, an autophagy-inducing protein
+          that I studied last summer.
+        Those colorful things are small molecule/fragment hydrids revelaled to bind to FIP200 by DNA encoded library testing.</h1>
+        </div>
 
-<!-- Description -->
-<h1 style="font-size:3vw" style="margin-left:10px">Hi! I'm Ian, a math and molecular biology major at Pomona college, among other things.</h1>
-<h1 style="font-size:3vw">  </h1>
-<h1 style="font-size:3vw">  </h1>
+        <div class="w3-third w3-container">
+          <br />
 
-<br />
-<br />
+</div>
+        <div class="w3-third w3-container">
 
-<!-- CARDS -->
-<div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
+          <h1 style="font-size:2.5vw" style="margin-left:40px">To learn more about my work on FIP200 as well as other research I've had the
+             privlege of being a part of, click the link below.</h1>
+          </div>
 
-      <h3>Research Experience</h3>
-      <img class="card-img-top" src="{% static 'img/caltech2.png' %}">
-
-      <p>Here are some of the cool things I've been able to work on both here at Pomona and at Caltech</p>
-
-      <p><a href="{% url 'project_research'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
-
-
-
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-
-      <h3>Projects</h3>
-      <img class="card-img-top" src="{% static 'img/graph5.png' %}">
-
-      <p>Here's a handful of fun projects I've done, some as part of a class, and some on my own time</p>
-      <p><a href="{% url 'project_projects'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-
-      <h3>Coursework</h3>
-      <img class="card-img-top" src="{% static 'img/schedule.png' %}">
-
-      <p>Here's a list of the classes I've taken here at Pomona as well as links to some of my work.</p>
-      <p><a href="{% url 'project_course'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-
-      <h3>Extracurriculars</h3>
-      <img class="card-img-top" src="{% static 'img/extra.png' %}">
-
-      <p>Here's what find fulfillment in before and after the bell rings :)</p>
-      <p><a href="{% url 'project_extra'%}"  class="w3-button w3-light-grey w3-block">Read More</a></p>
     </div>
   </div>
+  <div class="between">
+    <h2><a href="{% url 'project_research'%}"  class="w3-button w3-light-grey w3-block">Read More about Research</a></h2>
 
-<!-- NAVBAR -->
-<div class="w3-bottom" style="margin-bottom:5px">
-  <hr2/>
-  <a > © 2022 Ian Horsburgh. I built this website using Django framework. A few elements were influenced by W3 schools, a great resourse that you should check out!</a>
+  </div>
+
+  <!-- Projects -->
+
+<div class="image-three">
+  <div class="caption" >
+    <h1 style="font-size:5vw"style="margin-left:10px">Projects</h1>
+    <div class="w3-third 3-container">
+      <br />
+
+      </div>
+    <div class="w3-twothird 3-container">
+      <br />
+
+      <h1 style="font-size:2.5vw" style="margin-left:40px">During my time here at Pomona, I've been able to work on some pretty cool projects both
+      for classes, and in my free time. Behind this text is a graph of interpolated data from a semester-long multiple linear regression project
+    I worked on last spring. To learn more about that project, as well as others (like this website), click the link below.</h1>
+
 
       </div>
 
-    </div>
+
   </div>
 </div>
+<div class="between">
+  <h2><a href="{% url 'project_projects'%}"  class="w3-button w3-light-grey w3-block">Read More about projects</a></h2>
+
+</div>
+
+
+  <!-- Classes -->
+
+<div class="image-two">
+  <div class="caption" >
+    <h1 style="font-size:5vw"style="margin-left:10px">Classes</h1>
+    <div class="w3-twothird w3-container">
+      <br />
+
+      <h1 style="font-size:2.5vw" style="margin-left:40px">This one isn't super interesting, but it is pretty relevant to the material that I feel comfotable with.
+      As I also do a fair bit of learning during my free time, I've added a skills section to talk a little bit about things I've learned not in class.
+    To see all of these, click the link below!</h1>
+
+
+      </div>
+
+      <div class="w3-third w3-container">
+
+
+
+        </div>
+
+  </div>
+</div>
+<div class="between">
+  <h2><a href="{% url 'project_course'%}"  class="w3-button w3-light-grey w3-block">Read More about Classes</a></h2>
+
+</div>
+
+
+
+</body>
+</html>
+
+<!-- Extracurriculars -->
+
+<div class="image-four">
+<div class="caption" >
+  <h1 style="font-size:5vw"style="margin-left:10px">Extracurriculars</h1>
+  <div class="w3-third 3-container">
+    <br />
+
+    </div>
+  <div class="w3-twothird 3-container">
+    <br />
+
+    <h1 style="font-size:2.5vw" style="margin-left:40px">While it may seem from this website that I spend all of my time doing school, that's not really
+    an accurate representation of who I am. To see some of the things I spend (probably too much) time on, click the link below!</h1>
+
+
+    </div>
+
+
+</div>
+</div>
+<div class="between">
+<h2><a href="{% url 'project_extra'%}"  class="w3-button w3-light-grey w3-block">Read More about extracurriculars</a></h2>
+
+</div>
+
+<!-- NAVBAR -->
+<div class="w3-bottom" style="margin-bottom:5px; background-color:white">
+  <h1 style="font-size:1.2vw"style="margin-left:10px"> © 2022 Ian Horsburgh. I built this website using Django framework, and I hosted it on DigitalOcean. </h1>
+      </div>
+
+  <!-- CSS BLOCK -->
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+  body {font-family: 'Helvetica', 'Arial', sans-serif;}
+
+
+  .header{
+
+    background-color: white
+  }
+
+  .image-one {
+    background-image: url('/projects/static/img/caltech5.png');
+    opacity: 0.65;
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60%;
+  }
+
+    .image-two {
+      background-image: url('/projects/static/img/cal5.png');
+      opacity: 0.65;
+      min-height: 600px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 60%;
+    }
+
+    .image-three {
+      background-image: url('/projects/static/img/proj2.png');
+      opacity: 0.65;
+      min-height: 600px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 60%;
+    }
+    .image-four {
+      background-image: url('/projects/static/img/extra3.png');
+      opacity: 0.65;
+      min-height: 600px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 60%;
+    }
+
+    .caption {
+      position: absolute;
+
+      width: 100%;
+      text-align: left;
+    }
+    .right-caption {
+      position: absolute;
+      top: 30%;
+      width: 100%;
+      text-align: right;
+    }
+
+
+    .caption span {
+      padding: 10px 30px;
+      background: black;
+      color: lavenderblush;
+      font-size: 2rem;
+    }
+
+    .between {
+      text-align: center;
+      padding: 3.5rem;
+      line-height: 1.8;
+      margin: 0 10%;
+    }
+
+    hr2 {
+        display: block;
+        height: 2px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 1em;
+        padding: 0;
+    }
+
+
+
+
+  </style>
+<!-- JS BLOCK -->
+<script>
+  AOS.init({
+    duration: 1200,
+  })
+</script>
 
 {% endblock %}
